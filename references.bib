@@ -51,7 +51,7 @@ year="2012",
 publisher="Springer Berlin Heidelberg",
 address="Berlin, Heidelberg",
 pages="287--317",
-abstract="A backdoor set is a set of variables of a propositional formula such that fixing the truth values of the variables in the backdoor set moves the formula into some polynomial-time decidable class. If we know a small backdoor set we can reduce the question of whether the given formula is satisfiable to the same question for one or several easy formulas that belong to the tractable class under consideration. In this survey we review parameterized complexity results for problems that arise in the context of backdoor sets, such as the problem of finding a backdoor set of size at most k, parameterized by k. We also discuss recent results on backdoor sets for problems that are beyond NP.",
+abstract="A backdoor set is a set of variables of a propositional formula such that fixing the truth values of the variables in the backdoor set moves the formula into some polynomial-time decidable class. If we know a small backdoor set we can reduce the question of whether the given formula is satisfiable to the same question for one or several easy formulas that belong to the tractable class under consideration. In this survey we review parameterized complexity results for problems that arise in the context of backdoor sets, such as the problem of finding a backdoor set of size at most k, parameterized by k. We also discuss recent results on backdoor sets for problems that are beyond NP.",
 isbn="978-3-642-30891-8",
 doi="10.1007/978-3-642-30891-8_15",
 url="https://doi.org/10.1007/978-3-642-30891-8_15",
@@ -70,5 +70,103 @@ annotate = "This paper is a survey and comparison of different backdoor sets for
   isbn      = {978-1-4612-6798-0},
   timestamp = {Fri, 17 Jul 2020 16:12:37 +0200},
   biburl    = {https://dblp.org/rec/series/mcs/DowneyF99.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{HornSAT,
+title = {Linear-time algorithms for testing the satisfiability of propositional horn formulae},
+journal = {The Journal of Logic Programming},
+volume = {1},
+number = {3},
+pages = {267-284},
+year = {1984},
+issn = {0743-1066},
+doi = {https://doi.org/10.1016/0743-1066(84)90014-1},
+url = {https://www.sciencedirect.com/science/article/pii/0743106684900141},
+author = {William F. Dowling and Jean H. Gallier},
+abstract = {New algorithms for deciding whether a (propositional) Horn formula is satisfiable are presented. If the Horn formula A contains K distinct propositional letters and if it is assumed that they are exactly P1,…, PK, the two algorithms presented in this paper run in time O(N), where N is the total number of occurrences of literals in A. By representing a Horn proposition as a graph, the satisfiability problem can be formulated as a data flow problem, a certain type of pebbling. The difference between the two algorithms presented here is the strategy used for pebbling the graph. The first algorithm is based on the principle used for finding the set of nonterminals of a context-free grammar from which the empty string can be derived. The second algorithm is a graph traversal and uses a “call-by-need” strategy. This algorithm uses an attribute grammar to translate a propositional Horn formula to its corresponding graph in linear time. Our formulation of the satisfiability problem as a data flow problem appears to be new and suggests the possibility of improving efficiency using parallel processors.}
+}
+
+@article{2SAT,
+title = {A linear-time algorithm for testing the truth of certain quantified boolean formulas},
+journal = {Information Processing Letters},
+volume = {8},
+number = {3},
+pages = {121-123},
+year = {1979},
+issn = {0020-0190},
+doi = {https://doi.org/10.1016/0020-0190(79)90002-4},
+url = {https://www.sciencedirect.com/science/article/pii/0020019079900024},
+author = {Bengt Aspvall and Michael F. Plass and Robert Endre Tarjan},
+keywords = {Quantified Boolean formula, strongly connected components, 2-CNF, 2-satisfiability}
+}
+
+@inproceedings{Cook71,
+  author    = {Stephen A. Cook},
+  editor    = {Michael A. Harrison and
+               Ranan B. Banerji and
+               Jeffrey D. Ullman},
+  title     = {The Complexity of Theorem-Proving Procedures},
+  booktitle = {Proceedings of the 3rd Annual {ACM} Symposium on Theory of Computing,
+               May 3-5, 1971, Shaker Heights, Ohio, {USA}},
+  pages     = {151--158},
+  publisher = {{ACM}},
+  year      = {1971},
+  url       = {https://doi.org/10.1145/800157.805047},
+  doi       = {10.1145/800157.805047},
+  timestamp = {Mon, 26 Nov 2018 15:05:57 +0100},
+  biburl    = {https://dblp.org/rec/conf/stoc/Cook71.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Levin73,
+  added-at = {2010-04-23T21:53:33.000+0200},
+  author = {Levin, Leonid A.},
+  biburl = {https://www.bibsonomy.org/bibtex/28c140ab9cb635a38e1b1ea2232ac3524/emanuel},
+  interhash = {13aa87c780a3329a367d1ddc095ab77d},
+  intrahash = {8c140ab9cb635a38e1b1ea2232ac3524},
+  journal = {Problems of Information Transmission},
+  keywords = {universal_search},
+  number = 3,
+  timestamp = {2010-04-23T21:53:33.000+0200},
+  title = {Universal Sequential Search Problems},
+  volume = 9,
+  year = 1973
+}
+
+@inproceedings{Nishimura,
+  author    = {Naomi Nishimura and
+               Prabhakar Ragde and
+               Stefan Szeider},
+  title     = {Detecting Backdoor Sets with Respect to Horn and Binary Clauses},
+  booktitle = {{SAT} 2004 - The Seventh International Conference on Theory and Applications
+               of Satisfiability Testing, 10-13 May 2004, Vancouver, BC, Canada,
+               Online Proceedings},
+  year      = {2004},
+  url       = {http://www.satisfiability.org/SAT04/programme/51.pdf},
+  timestamp = {Thu, 12 Mar 2020 11:37:13 +0100},
+  biburl    = {https://dblp.org/rec/conf/sat/NishimuraRS04.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{GanianBackdoorTreewidth,
+  author    = {Robert Ganian and
+               M. S. Ramanujan and
+               Stefan Szeider},
+  editor    = {Serge Gaspers and
+               Toby Walsh},
+  title     = {Backdoor Treewidth for {SAT}},
+  booktitle = {Theory and Applications of Satisfiability Testing - {SAT} 2017 - 20th
+               International Conference, Melbourne, VIC, Australia, August 28 - September
+               1, 2017, Proceedings},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {10491},
+  pages     = {20--37},
+  publisher = {Springer},
+  year      = {2017},
+  url       = {https://doi.org/10.1007/978-3-319-66263-3\_2},
+  doi       = {10.1007/978-3-319-66263-3\_2},
+  timestamp = {Tue, 03 Nov 2020 08:17:24 +0100},
+  biburl    = {https://dblp.org/rec/conf/sat/GanianRS17.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }

@@ -278,10 +278,10 @@ First we will show the necessary notation and definitions used in \cite{maehlman
 
 The concept of strong recursive backdoors is built on the observation that the components of $G_{x_{\star}}$ can be handled independently. This leads to the definition of a strong recursive backdoor:
 
-\begin{definition}
+\begin{definition}[{\cite[p.4]{maehlmann2021recursive}}]
 A \textit{strong recursive backdoor} (SRB) of an incidence graph $G$ to a class $\mathcal{C}$ is a rooted labeled tree, where every node is either labeled with a subgraph of $G$ or with a variable in $var(G)$. The root of the tree is labeled with $G$. Whenever an inner node is labeled with a connected graph $H$, then it has one child labeled with a variable. Whenever it is labeled with a disconnected graph, then it has one child for each of its components, labeled with the graph induced by that component. Whenever an inner node is labeled with a variable $x$, then its parent is labeled with a graph $H$, and its two children are labeled with $H[x_+]$ and $H[x_-]$, respectively. Every leaf node is labeled with a graph from $\mathcal{C}$. We call the nodes of the tree \textit{variable nodes} or \textit{component nodes}, according to their labeling. 
 \end{definition}
-The depth of a strong recursive backdoor is then defined as the number of variable nodes from its root to one of its leafs. The strong recursive depth to a class $\mathcal{C}$ is then defined as the minimal depth of all strong recursive backdoors of $G$. By this definition we can see that the tree branches into the connected components of a formula and considers these instances separately, as described before. Furthermore, we show the precise definition of strong recursive backdoor depth:
+The depth of a strong recursive backdoor is then defined as the number of variable nodes from its root to one of its leafs. The strong recursive depth to a class $\mathcal{C}$ is defined as the minimal depth of all strong recursive backdoors of $G$. By this definition we can see that the tree branches into the connected components of a formula and considers these instances separately, as described before. Furthermore, we show the precise definition of strong recursive backdoor depth:
 \begin{definition}[Strong recursive backdoor depth,{\cite[Definition 3.1, p.5]{maehlmann2021recursive}}]
 
 \begin{equation*}

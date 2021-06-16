@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage{termpaper}
 \usepackage[utf8]{inputenc}
-\usepackage{tabularx,lipsum,environ,amsmath,amssymb,amsthm}
+\usepackage{tabularx,lipsum,environ,amsmath,amssymb,amsthm,mathtools}
 \usepackage{todonotes}
 \usepackage{enumerate}
 
@@ -46,6 +46,9 @@
 \theoremstyle{proposition}
 \newtheorem{proposition}{Proposition}[section]
 
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
 %opening
 \title{Fixed Parameter Tractability of SAT through Backdoors}
 \author{
@@ -60,22 +63,25 @@
 \maketitle
 
 \begin{abstract}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \todo{Write abstract}
+The Satisfiability Problem (SAT) is a fundamental problem in logic and computer science. Its versatility makes SAT a modeling tool for many different kinds of problems related to software and hardware planning and design. However, SAT belongs to the class of NP-Complete problems and therefore an efficient algorithm for an unrestricted SAT-instance seems unlikely. Despite that, with SAT-solvers becoming more and more powerful, a large gap between theoretical and practical results is noticeable. This leads to research on hidden structural properties of SAT-instances that can be exploited algorithmically. One of these approaches is comprised of the study of backdoor sets, which are defined with respect to a tractable class $\mathcal{C}$ of formulas in propositional logic. By finding a small backdoor of size $k$ in a formula $F$ into a tractable class $\mathcal{C}$, a SAT-instance can be solved efficiently in time $f(k) \cdot |F|^c$ for some computable function $f$ and an independent constant $c$. Additionally, similar results have been shown even for backdoors that have unbounded size that have certain structural properties.
 \end{abstract}
 
 \section{Introduction}
 
-The Satisfiability Problem (SAT) is a fundamental problem in logic and computer science. Given a formula $F$ in propositional logic, the task is to determine whether there exists some assignment of variables in $F$ to the truth values $\{0,1\}$ such that the formula is evaluated to $1$. The simplicity of its definition makes SAT a very powerful modeling tool for many different problems related to software and hardware planning and design. For many such problems it is easier to express it as a propositional logic formula where a satisfying variable assignment can be transformed into a solution of the original problem, and use a SAT-solver on the instance than to develop a problem-specific algorithm. 
+The Satisfiability Problem (SAT) is a fundamental problem in logic and computer science. Given a formula $F$ in propositional logic, the task is to determine whether there exists some assignment of variables in $F$ to the truth values $\{0,1\}$ such that the formula is evaluated to $1$. The simplicity of its definition makes SAT a very powerful modeling tool for many different problems related to software and hardware planning and design. For many such problems it is easier to express it as a propositional logic formula where a satisfying variable assignment can be transformed into a solution of the original problem, and use a SAT-solver on the instance, than to develop a problem-specific algorithm. 
 
 The famous Cook-Levin Theorem \cite{Cook71, Levin73} states that SAT belongs to the class of NP-Complete problems. This means that, although it is easy to verify a solution, the existence of an efficient polynomial time algorithm to solve any given instance seems highly unlikely. However, despite the theoretical worst-case complexity of the problem, many large real-world SAT instances can be solved rather efficiently by modern SAT-solvers. This gap between theoretical and practical results lead to research on the structural properties of SAT-instances that can be exploited in order to explain this phenomenon. 
 
-The framework of Parameterized Complexity was introduced by Downey and Fellows \cite{downeyFellows} in order provide tools for a more fine-grained analysis of computationally hard problems. This framework allows to consider the runtime of a problem given some fixed parameter. Depending on the chosen parameter, the runtime can differ drastly, which leads to the study of fixed-parameter tractable parameters. In the context of SAT this leads to two (not necessarily exclusive) approaches when studying its parameterized complexity: Structural Decomposition and Backdoors. While the former is comprised of approaches to find and exploit structural properties of the whole input formula, the latter is about finding a small subset of variables whose assignment leads into a tractable class of SAT-instances. In this seminar paper we will focus on showing fixed-parameter tractability results that can be achieved by the latter approach, Backdoors. 
+The framework of Parameterized Complexity was introduced by Downey and Fellows \cite{downeyFellows} in order provide tools for a more fine-grained analysis of computationally hard problems. This framework allows to consider the runtime of a problem given some fixed parameter. Depending on the chosen parameter, the runtime can differ drastly, which leads to the study of parameters that allow efficient computation of the problem. In the context of SAT this leads to two (not necessarily exclusive) approaches when studying its parameterized complexity: Structural decomposition and backdoors. While the former is comprised of approaches to find and exploit structural properties of the whole input formula, the latter is about finding a small subset of variables whose assignment leads into a tractable class of SAT-instances. In this seminar paper we will focus on showing fixed-parameter tractability results that can be achieved by the latter approach, backdoors. 
 
-Section \ref{sec:preliminaries} contains information about the necessary preliminaries and notation that is used in this work. Section \ref{sec:boundedbackdoors} gives a general overview of fixed-parameter tractability and intractability results regarding Backdoors of bounded size. These results are based on a survey of Gaspers and Szeider \cite{Gaspers2012}. Section \ref{sec:unboundedbackdoors} contains recent contributions to research regarding Backdoors of unbounded size. Finally, section \ref{sec:conclusions} summarizes the results shown in this seminar paper and offers some concluding remarks. 
+Section \ref{sec:preliminaries} contains information about the necessary preliminaries and notation that is used in this work. Section \ref{sec:smallbackdoors} gives a general overview of fixed-parameter tractability and intractability results regarding Backdoors of small size. These results are based on a survey of Gaspers and Szeider \cite{Gaspers2012}. Section \ref{sec:unboundedbackdoors} contains recent contributions to research regarding Backdoors of unbounded size. Finally, Section \ref{sec:conclusions} summarizes the results shown in this seminar paper and offers some concluding remarks. 
+
+
 
 \section{Preliminaries}
 \label{sec:preliminaries}
-This section contains definitions of the general concepts used in context with Backdoors in SAT. We conform to the notation and definition for SAT, Base Classes, and Backdoor Sets used by Gaspers and Szeider \cite{Gaspers2012} and give a brief introduction on fixed-parameter tractability as defined by Cygan et al \cite{Cygan2015}. Note that section \ref{sec:relatedwork} contains additional definitions and notation specific to the presented material. 
+
+This section contains definitions of the general concepts used in context with Backdoors in SAT. We conform to the notation and definition for SAT, Base Classes, and Backdoor Sets used by Gaspers and Szeider \cite{Gaspers2012} and give a brief introduction on fixed-parameter tractability as defined by Cygan et al \cite{Cygan2015}. Note that Section \ref{sec:unboundedbackdoors} contains additional definitions and notation specific to the presented material. 
 \subsection{The Satisfiability Problem}
 The Satisfiability Problem, Boolean Satisfiability Problem, or SAT is a fundamental problem in computer science with many applications in software and hardware planning and scheduling, since many problems can be modeled as SAT-instances and solved by SAT-solvers. It is an NP-Complete decision problem that can be defined as follows: 
 \begin{csproblem}
@@ -84,11 +90,11 @@ The Satisfiability Problem, Boolean Satisfiability Problem, or SAT is a fundamen
 \problemquestion{Is there a truth assignment $\tau: X \to \{0,1\}$ (or $\tau \in 2^X$) such that $F[\tau]$ evaluates to $1$?}
 \end{csproblem}
 
-We use the following notation: A literal is a propositional variable $x$ or $x^1$ (positive literal) or a negated variable $\overline{x}$ or $x^0$ (negative literal). A clause is a finite set of literals that does not contain two complementary literals (e.g. $x$ and $\overline{x}$). A SAT-instance is comprised of a propositional logic formula $F$ in conjunctive normal form (CNF), which is a set of clauses, where the literals inside each clause are only connected by the binary operator "logical or" ($\lor$) and the clauses are connected only by the binary operator "logical and" ($\land$). We denote as $k-CNF$ the set of propositional logic formulae in conjunctive normal form that contain at most $k$ literals in each clause. When describing a formula $F$, we use the following equivalent notations: $F = \{ \{x_1, \overline{x_2}\}, \{x_3\} \} = (x_1 \lor \overline{x_2}) \land x_3$. We call a clause $C$ containing only positive literals a \textit{postivie clause}, and a clause containing only negative literals a $\textit{negative clause}$. 
+We use the following notation: A literal is a propositional variable $x$ or $x^1$ (positive literal) or a negated variable $\overline{x}$ or $x^0$ (negative literal). A clause is a finite set of literals that does not contain two complementary literals (e.g. $x$ and $\overline{x}$). A SAT-instance is comprised of a propositional logic formula $F$ in conjunctive normal form (CNF), which is a set of clauses, where the literals inside each clause are only connected by the binary operator "logical or" ($\lor$) and the clauses are connected only by the binary operator "logical and" ($\land$). We denote as \textit{$k$-CNF} the set of propositional logic formulas in conjunctive normal form that contain at most $k$ literals in each clause. When describing a formula $F$, we use the following equivalent notations: $F = \{ \{x_1, \overline{x_2}\}, \{x_3\} \} = (x_1 \lor \overline{x_2}) \land x_3$. We call a clause $C$ containing only positive literals a \textit{postivie clause}, and a clause containing only negative literals a $\textit{negative clause}$. The width of a clause is $|var(C)|$. 
 
-If not stated otherwise, we use $F$ to describe a formula, and $C \in F$ to describe a clause. We denote as $var(F)$ the set of all variables that appear in a formula $F$ as a positive or negative literal. Similarly, we denote as $var(C)$ the set of variables that appear in a clause $C$ as a positive or negative literal. Furthermore, we denote as $n = |var(F)|$ the number of variables and as $m = |\{C \colon C \in F \}|$ the number of clauses in a formula.  
+If not stated otherwise, we use $F$ to describe a formula, and $C \in F$ to describe a clause. We denote as $var(F)$ the set of all variables that appear in a formula $F$ as a positive or negative literal. Similarly, we denote as $var(C)$ the set of variables that appear in a clause $C$ as a positive or negative literal. Furthermore, we denote as $n = |var(F)|$ the number of variables and as $m = |\{C \colon C \in F \}|$ the number of clauses in $F$.  
 
-A truth assignment $\tau: X \to \{0,1\}$ is a function that maps the variables in $X \subseteq var(F)$ to the truth values $\{0,1\}$ and we denote as $2^X$ the set of all truth assignments over $X$. For $\tau \in 2^X$ let $\text{true}(\tau) = \{x^{\tau(x)} \colon x \in X\}$ and $\text{false}(\tau) = \{x^{1-\tau(x)} \colon x \in X\}$ be the set of of literals set by $\tau$ to 1 and 0 respectively. We then define $F[\tau] = \{ C \setminus \text{false}(\tau) \colon C \in F, C \cap \text{true}(\tau) = \emptyset \}$. Informally, $F[\tau]$ is the set of clauses that remain after we removing all clauses containing at least one literal that is evaluated to 1 by $\tau$, and removing all literals that are evaluated to 0 by $\tau$ from these remaining clauses. A CNF-formula $F$ is \textit{satisfiable} if there is some $\tau \in 2^{var(F)}$ such that $F[\tau] = \emptyset$, so each clause $C \in F$ contains at least one literal that evaluates to 1 under $\tau$. If there exists no such $\tau \in 2^var(F)$, the formula is \textit{unsatisfiable}. SAT then becomes the problem of deciding whether a CNF-formula $F$ is satisfiable. 
+A truth assignment $\tau: X \to \{0,1\}$ is a function that maps the variables in $X \subseteq var(F)$ to the truth values $\{0,1\}$ and we denote as $2^X$ the set of all truth assignments over $X$. For $\tau \in 2^X$ let $\text{true}(\tau) = \{x^{\tau(x)} \colon x \in X\}$ and $\text{false}(\tau) = \{x^{1-\tau(x)} \colon x \in X\}$ be the set of of literals set by $\tau$ to 1 and 0 respectively. We then define $F[\tau] = \{ C \setminus \text{false}(\tau) \colon C \in F, C \cap \text{true}(\tau) = \emptyset \}$. Intuitively, $F[\tau]$ is the set of clauses that remain after we removing all clauses containing at least one literal that is evaluated to 1 by $\tau$, and removing all literals that are evaluated to 0 by $\tau$ from these remaining clauses. A CNF-formula $F$ is \textit{satisfiable} if there is some $\tau \in 2^{var(F)}$ such that $F[\tau] = \emptyset$, so each clause $C \in F$ contains at least one literal that evaluates to 1 under $\tau$. If there exists no such $\tau \in 2^var(F)$, the formula is \textit{unsatisfiable}. SAT then becomes the problem of deciding whether a CNF-formula $F$ is satisfiable. 
 
 The primal graph of $F$ is a graph whose vertex set consists of exactly of $var(F)$ and two vertices are joined by an edge if the occur together in a clause in $F$. The positive primal graph is defined similarly, but there are only edges between variables that occur together as a positive literal in a clause. The negative primal graph is defined analogously. The incidence graph of $F$ is a bipartite graph whose vertex set is $V_1 \cup V_2$, where $V_1$ contains a vertex for each variable and $V_2$ contains a vertex for each clause. Edges are introduced between two vertices if the variable of the corresponding vertex in $V_1$ appears in the clause of the corresponding vertex of $V_2$. 
 
@@ -129,10 +135,10 @@ What follows is a list of the base classes relevant to this seminar paper, but n
 \end{enumerate}
 As all of these base classes are clause-defined, they can also be recognized in time linear in $m \cdot n$, by checking for each clause whether it is contained in the corresponding base class. Note that for 2-CNF formulas the factor $n$ can be omitted, since clauses can only contain 2 literals at most. Thus, property (i) of definition \ref{def:baseclass} is satisfied. The satisfiability of Horn-formulas and Anti-Horn-formulas can be decided in linear time \cite{HornSAT}, and also the satisfiability of 2-CNF formulas can be decided in linear time $\cite{2SAT}$. For 0-valid formulas deciding the satisfiability is even simpler, as there exists a trivial satisfying assignment for each 0-valid formula which assigns 0 to all variables. Similarly, 1-valid formulas have a trivial satisfying assignment by setting all variables to 1. As the satisfiability of all of Schaefer's base classes can be decided in polynomial time, we conclude that property (ii) of definition \ref{def:baseclass} is also satisfied. 
 
-\todo{Maybe property 3? Subsolver base classes? Base classes for Strong recursive backdoors}
+Furthermore, let $\mathcal{C}_0$ be the class of formulas with clause width at most 0. A formula $F \in \mathcal{C}_0$ is satisfiable if and only if $F = \emptyset$, otherwise it must contain at least one empty clause and is unsatisfiable. Clearly, $C_0$ can be recognized and decided in polynomial time, therefore $\mathcal{C}_0$ is a base class, consisting of all formulas with edgeless incident graphs.  
 
 \subsection{Backdoor Sets}
-The term \textit{backdoor} was introduced and coined by Williams et al.\cite{typicalCaseComplexity}, where the authors define backdoors and strong backdoors for constraint satisfaction problems, which can be seen as a generalization of SAT. In their work, backdoors are defined with respect to subsolvers, whose definition is similar to base classes. They introduce and use the concept of backdoors to explain the performance of SAT-solvers on large instances with small backdoors, and show empirical evidence for the existence of backdoors in real-world instances. For example, they show an instance with 6783 variables and 437431 clauses that contains a backdoor of only 12 variables. Furthermore, they introduce 3 different algorithms to detect and compute such backdoors, and show that adding randomization increases performance, which serves as an explanation to the observation that many SAT-solvers profit from restarts combined with randomization. 
+The term \textit{backdoor} was introduced and coined by Williams et al.\cite{typicalCaseComplexity}, where the authors define backdoors and strong backdoors for constraint satisfaction problems (CSPs) and for SAT. In their work, backdoors are defined with respect to subsolvers, whose definition is similar to base classes. They introduce and use the concept of backdoors to explain the performance of SAT-solvers on large instances with small backdoors, and show empirical evidence for the existence of backdoors in real-world instances. For example, they show an instance with 6783 variables and 437431 clauses that contains a backdoor of only 12 variables. Furthermore, they introduce 3 different algorithms to detect and compute such backdoors, and show that adding randomization increases performance, which serves as an explanation to the observation that many SAT-solvers profit from restarts combined with randomization. 
 
 For backdoors and backdoor sets we conform to the definitions of Gaspers and Szeider \cite{Gaspers2012}. A $\mathcal{C}$-backdoor set is a set is a subset of variables of a CNF-formula $F$ whose assignment leads into a tractable base class $\mathcal{C}$. 
 \begin{definition}[{\cite[p.289f]{Gaspers2012}}]
@@ -151,8 +157,15 @@ If a class $\mathcal{C}$ is clause-induced, then every deletion $\mathcal{C}$-ba
 Furthermore, if a class $\mathcal{C}$ is closed under unions, then strong backdoor sets and deletion backdoor sets conincide, as $\bigcup_{\tau \in 2^B} F[\tau] = F - B$. This observation can easily be verified by inspecting any clause in $F$ with $var(C) \cap B \neq \emptyset$. Since $C$ contains no complementary literals, we can find a truth assignment such that the literal for each variable in $var(C) \cap B$ is set to 0. The clause that results from this truth assignment is then equivalent to the clause that results from deleting the variables in $B$. 
 
 As shown above, for some base classes strong backdoor sets and deletion backdoor sets conincide. Therefore it is sometimes simpler to consider only strong backdoor sets or only deletion backdoor sets for some base classes. This holds for example for Schaefer's base classes, as all of them are clause-induced and closed under unions. 
-\section{Results for Backdoors of bounded size}
-\label{sec:boundedbackdoors}
+
+\subsection{Parameter Dominance}
+\begin{definition}[{\cite[p.422]{HandbookOfSAT}}]
+A \textit{satisfiability parameter} is a computable function $\pi$ that assigns to every formula $F$ a non-negative integer $\pi(F)$. 
+\end{definition}
+Satisfiability parameters are a concept introduced to compare parameterizations of SAT. We are interested in satisfiability parameters $\pi$ that allow FPT for SAT parameterized by $\pi(F)$ for some CNF-formula $F$. In this context, we say that $\pi$ \textit{dominates} $\pi'$ if there exists a computable function $f$ such that for every formula $F$ we have $\pi(F) \leq f(\pi'(F))$. If $\pi$ dominates $\pi'$, and SAT parameterized by $\pi$ is FPT, then SAT parameterized by $\pi'$ is also FPT \cite[p.423]{HandbookOfSAT}. Furthermore, two satisfiability parameters $\pi, \pi'$ are incomparable if neither $\pi$ dominates $\pi'$ nor vice versa. 
+
+\section{Results for Backdoors of small size}
+\label{sec:smallbackdoors}
 
 In this section we will give an overview of FPT results and intractability results for the detection of strong and weak backdoor sets of size $k$. The results in this section were presented and compiled in a survey of Gaspers and Szeider \cite{Gaspers2012}. 
 
@@ -174,15 +187,15 @@ As we have shown already, SAT is FPT parameterized by the size of a strong backd
 
 For a CNF-formula $F$ it can easily be seen that the set of deletion Horn-backdoor set corresponds exactly to the set of vertex covers of the positive primal graph of $F$, therefore the fixed-parameter tractability of \textsc{Vertex Cover} can be utilized to find a strong Horn-backdoor set in FPT time. As we observed before, strong backdoor sets and deletion backdoor sets coincide for Schaefer's base classes. Thus, fixed-parameter tractability of strong Horn-backdoor set detection follows. Strong Anti-Horn-backdoor set detection can be solved symmetrically by finding vertex covers of the negative primal graph of $F$.  
 
-For Strong 2-CNF-backdoor set detection the authors present a reduction to \textsc{3-Hitting Set}, which is another fixed-parameter tractable problem. They define a hypergraph whose vertex set consist of exactly the variables in $F$. For each clause $C$ containing more than 2 literals a hyperedge is introduced for each distinct subset of exactly 3 variables $x_1,x_2,x_3$, such that $x_1,x_2,x_3 \in var(C)$. By this reduction we obtain an instance of \textsc{3-Hitting Set} where each hitting set corresponds to a deletion 2-CNF-backdoor set and thus a strong 2-CNF-backdoor set. An example for this reduction can be seen in figure \ref{fig:2cnf-to-3hittingset}
+For Strong 2-CNF-backdoor set detection the authors present a reduction to \textsc{3-Hitting Set}, which is another fixed-parameter tractable problem. They define a hypergraph whose vertex set consist of exactly the variables in $F$. For each clause $C$ containing more than 2 literals a hyperedge is introduced for each distinct subset of exactly 3 variables $x_1,x_2,x_3$, such that $x_1,x_2,x_3 \in var(C)$. By this reduction we obtain an instance of \textsc{3-Hitting Set} where each hitting set corresponds to a deletion 2-CNF-backdoor set and thus a strong 2-CNF-backdoor set. An example for this reduction can be seen in Figure \ref{fig:2cnf-to-3hittingset}
 
 For 0-valid and 1-valid formulas, the authors state that the smallest strong 0-valid-backdoor set of $F$ is exactly the union of $var(C)$ for all positive clauses in $F$, whereas the smallest strong 1-valid-backdoor set of $F$ is the union of $var(C)$ for all negative clauses in $F$. 
 
-\begin{figure}
+\begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{figures/hitting_set.eps}
-        \label{fig:2cnf-to-3hittingset}
 	\caption{For each clause $C$ containing at least 3 variables a hypedge for each 3-element subset of $var(C)$ is introduced. In this figure, $\{x_1, x_2\}$ hits all hyperedges and is both a 3-hitting set and a strong 2-CNF-backdoor set.}
+	\label{fig:2cnf-to-3hittingset}
 \end{figure}
 
 
@@ -198,13 +211,13 @@ Analogously to section \ref{sec:strongdetection} we the decision problem for wea
 \begin{proposition}[{\cite[Proposition 1, p.293f]{Gaspers2012}}]
 \textsc{Weak $\mathcal{C}$-Backdoor Set Detection} is \text{W[2]}-hard for all base classes $\mathcal{C}\in \text{Schaefer}$.
 \end{proposition} 
-For weak $\mathcal{C}$-backdoor set detection, Gaspers and Szeider show that the problem is W[2]-hard for Schaefer's base classes and thus most likely fixed-parameter intractable. This is done by providing parameterized reduction from \textsc{Hitting-Set}, which is a W[2]-hard problem. However, the proof is rather long and intricate, therefore we will omit it and refer to the paper by Gaspers and Szeider.
+For weak $\mathcal{C}$-backdoor set detection, Gaspers and Szeider show that the problem is W[2]-hard for Schaefer's base classes and thus most likely fixed-parameter intractable. This is done by providing a parameterized reduction from \textsc{Hitting-Set}, which is a W[2]-hard problem. 
 
 However, if there are some restrictions on the input formulas, FPT results can be obtained for weak backdoor set detection. More precisely, Gaspers and Szeider show that weak $\mathcal{C}$-backdoor set detection is FPT if $\mathcal{C}$ is clause induced and the input formula is in $d$-CNF for some constant $d$. 
 \begin{proposition}[{\cite[Proposition 2, p.294f]{Gaspers2012}}]
 For every clause-defined class $\mathcal{C}$, \textsc{Weak $\mathcal{C}$-Backdoor Set Detection} is fixed-parameter tractable for input formulas in 3-CNF.
 \end{proposition}
-The proof follows from a bounded search tree argument. Given a formula $F \notin \mathcal{C}$, there must be a clause in $C \in F$ such that $\{C\} \notin \mathcal{C}$. A weak $\mathcal{C}$-backdoor set of $F$ must contain at least one variable of $C$. Since there are at most 3 variables in each clause, the branching of the search tree is limited by $3 \cdot 2$, since we can assign to each variable in $C$ either true or false, and if there exists a weak $\mathcal{C}$-backdoor set of size $k$, then one of these assignments must lead to a satisfying assignment. Since we are looking for a backdoor set of size $k$, the depth of the search tree is bounded by $k$. Finally, for each leaf $t$ of the tree we can obtain a truth assignment $\tau_t$ over $k$ variables. Since the number of leaves in the tree is bounded by $O(6^k)$, we can check for each leaf $t$ and each formula $F[\tau_t]$, whether $F[\tau_t] \in \mathcal{C}$ and decide the satisfiability for all $F[\tau_t] \in \mathcal{C}$ in polynomial time. Furthermore, it can easily be seen that this proof can be extended to obtain FPT results for input formulas in $d$-CNF for any constant $d$.  
+The proof follows from a bounded search tree argument. Given a formula $F \notin \mathcal{C}$, there must be a clause in $C \in F$ such that $\{C\} \notin \mathcal{C}$. A weak $\mathcal{C}$-backdoor set of $F$ must contain at least one variable of $C$. Since there are at most 3 variables in each clause, the branching of the search tree is limited by $3 \cdot 2$, since we can assign to each variable in $C$ either true or false, and if there exists a weak $\mathcal{C}$-backdoor set of size $k$, then one of these assignments must lead to a satisfying assignment. Since we are looking for a backdoor set of size $k$, the depth of the search tree is bounded by $k$. Finally, for each leaf $t$ of the tree we can obtain a truth assignment $\tau_t$ over $k$ variables. Since the number of leaves in the tree is bounded by $\mathcal{O}(6^k)$, we can check for each leaf $t$ and each formula $F[\tau_t]$, whether $F[\tau_t] \in \mathcal{C}$ and decide the satisfiability for all $F[\tau_t] \in \mathcal{C}$ in polynomial time. Furthermore, it can easily be seen that this proof can be extended to obtain FPT results for input formulas in $d$-CNF for any constant $d$.  
 
 
 \section{Results for Backdoors of unbounded size}
@@ -214,14 +227,98 @@ In this section we will show other recent work that is related to the study of b
 
 \subsection{Backdoor Treewidth}
 
-Shown by Ganian et al. \cite{GanianBackdoorTreewidth}
+In a series of two papers, Ganian et al. introduce the notion of backdoor treewidth for the class of Constraint Satisfaction Problems (CSP) \cite{GanianCSP} and then also for SAT \cite{GanianBackdoorTreewidth}. They observe that backdoors with a "tree-like" structure can be used algorithmically to achieve FPT results even for backdoors of unbounded size. Every SAT-instance can trivially be transformed into a CSP instance, however the authors state that the results of backdoor treewidth for CSP can only be used for CNF-formulas with bounded clause width. As one of the main contributions of \cite{GanianBackdoorTreewidth}, the authors show that there exists an FPT algorithm for SAT parameterized by the backdoor treewidth into the base classes Horn, Anti-Horn, and 2-CNF.
+
+We will now continue with the necessary notation and definitions of \cite{GanianBackdoorTreewidth}. 
+Let $X \subseteq var(F)$. Two clauses $C,C'$ are \textit{$X$-adjacent} if $(var(C) \cap var(C')) \setminus X \neq \emptyset$. Two clauses $c,d$ are \textit{$X$-connected} if there exists a sequence $c=c_1, \dots , c_r = d$ such that each consecutive pair of clausess $c_i, c_{i+1}$ are $X$-adjacent. An \textit{$X$-component} $Z$ of a CNF formula $F$ is then an inclusion-maximal subset of $X$-connected clauses, and its boundary is the set $var(Z) \cap X$. 
+
+ Backdoor treewidth is then defined as follows:
+\begin{definition}[{\cite[p.26]{GanianBackdoorTreewidth}}]
+Lef $F$ be a CNF-formula and $X$ be a backdoor in $F$ to a class $\mathcal{F}$. Then the $X$-torso graph $G_F^X$ of $F$ is the graph whose vertex set is $X$ and where two variables $x,y$ are adjacent if and only if there exists an $X$-component $A$ such that $x,y \in var(A)$. The treewidth of $X$ is then the treewidth of $G_F^X$, and the backdoor treewidth of $F$ w.r.t. $\mathcal{F}$ is the minimum treewidth of a backdoor into $\mathcal{F}$. 
+\end{definition}
+From the above definition it can easily be seen that the backdoor treewidth is trivially upper bounded by the size of the smallest backdoor into $\mathcal{F}$, although let it be noted that it can also be arbitrarily smaller. In terms of parameter dominance, this means that SAT parameterized by its backdoor treewidth into $\mathcal{F}$ dominates SAT parameterized by the size of its smallest backdoor into $\mathcal{F}$. Thus, the former parameter is more general than the latter. The authors illustrate this behaviour of backdoor treewidth on the following example: Consider the family of CNF formulas $\{\{x_1, x_2\}, \{x_2, x_3\}, \dots , \{x_{i-1}, x_i\} \}$ for $i \geq 2$. To obtain a backdoor into Horn, half of the variables have to be added to the backdoor set, therefore there exists no backdoor into horn of constant size. However, it can be easily seen, that the backdoor treewidth of a backdoor into Horn containing all variables with even index is a path and therefore has backdoor treewidth 1. We visualize this example in Figures \ref{fig:backdoortreewidth-1} and \ref{fig:backdoortreewidth-2}. 
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=1\textwidth]{figures/backdoortreewidth.eps}
+	\caption{The incidence graph of $F$ can be seen on the left. After removing the $X = \{x_2, x_4, x_6\}$ from $F$, which is a backdoor set into Horn, the graph on the left remains, in which it is easy to see the $X$-components of the graph. It can be seen that $x_2$ and $x_4$ lie in the same $X$-component defined by clauses $\{x_2,x_3\}, \{x_3,x_4\}$, and also $x_4, x_6$ lie in the same $X$-component, defined by $\{x_4,x_5\}, \{x_5,x_6\}$. The $X$-torso graph $G_F^X$ can be seen in Figure \ref{fig:backdoortreewidth-2}}
+	\label{fig:backdoortreewidth-1}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figures/backdoortreewidth2.eps}   
+	\caption{The $X$-torso graph $G_F^X$ from the example in Figure \ref{fig:backdoortreewidth-1} is clearly a path and has treewidth 1.}
+	\label{fig:backdoortreewidth-2}
+\end{figure}
+
+Ganian et al. then describe an algorithm that runs in time $2^{tw(G_F^X)}|F|^{\mathcal{O}(1)}$, where $X$ is a strong backdoor into a base class $\mathcal{F}$, and $tw(G_F^X)$ is the treewidth of the $X$-torso{\cite[p.27]{GanianBackdoorTreewidth}}. Note that this requires that such a backdoor $X$ can be computed efficiently. 
+
+The general idea behind the proof is that, given a strong backdoor $X$ of a CNF-formula $F$ into some tractable base class $\mathcal{F}$, the SAT-instance of $F$ can be transformed into an equivalent CSP-instance that can be solved within the previously stated time bounds. The authors then proceed to show that such a backdoor of small treewidth can be computed efficiently by transforming a CNF-formula $F$ into a 3-CNF-formula $F'$, such that each backdoor $X \subseteq var(F)$ of $F$ into Horn, Anti-Horn, and 2-CNF is also a backdoor in $F'$. This procedure can be done in polynomial time \cite[p.28]{GanianBackdoorTreewidth}. As previously mentioned, the direct application of the results of \cite{GanianCSP} was not possible for CNF-formulas with unbounded clause width. The backdoor-preserving transformation into a 3-CNF formula then permits the application of said results. Finally, the authors describe an FPT algorithm that computes a backdoor of treewidth at most $k$ or concludes that there exists no such backdoor{\cite[p.29]{GanianBackdoorTreewidth}}. We conclude this section listing the resulting theorem and lemmas.  
+\begin{theorem}[{\cite[Theorem 1, p.27]{GanianBackdoorTreewidth}}]
+SAT is fixed-parameter tractable when parameterized by the backdoor treewidth w.r.t. any of the following classes: Horn, Anti-Horn, 2-CNF.
+\end{theorem}
+
+\begin{lemma}[{\cite[Lemma 1, p.27]{GanianBackdoorTreewidth}}]
+Let $F$ be a CNF formula and let $X$ be a strong backdoor of $F$ into a tractable class $\mathcal{F}$. There is an algorithm that, given $F$ and $X$, runs in time $2^{tw(G_F^X)}|F|^{\mathcal{O}(1)}$ and correctly decides whether $F$ is satisfiable or not. 
+\end{lemma}
+
+\begin{lemma}[{\cite[Lemma 2, p.28]{GanianBackdoorTreewidth}}]
+Let $\mathcal{F} \in \{\text{Horn, Anti-Horn, 2-CNF}\}$. There exists a polynomial-time algorithm which takes as input a CNF formula $F$ and outputs a 3-CNF formula $F'$ such that $var(F) = var(F')$ with the following property: for each $X \subseteq var(F)$, $X$ is a backdoor of $F$ into $\mathcal{F}$ if and only if $X$ is a backdoor of $F'$ into $\mathcal{F}$.
+\end{lemma}
+
+\begin{lemma}[{\cite[Lemma 3, p.29]{GanianBackdoorTreewidth}}]
+Let $\mathcal{F} \in \{\text{Horn, Anti-Horn, 2-CNF}\}$. There exists a fixed-parameter algorithm which takes as input a CNF formula $F$ and a parameter $k$, and either finds a backdoor of treewidth at most $k$ into $\mathcal{F}$ or correctly determines that no such backdoor exists. 
+\end{lemma}
 
 \subsection{Strong Recursive Backdoors}
 
-Shown by Mählmann et al. \cite{maehlmann2021recursive}
+Mählmann et al. introduce the notion of \textit{strong} and \textit{weak recursive backdoors} into a class $\mathcal{C}$ \cite{maehlmann2021recursive}. Similar to the previous results by Ganian et al., the depth of a recursive backdoor is a satisfiability parameter of SAT permits fixed-parameter tractability into a base class $\mathcal{C}$ even if the size of the smallest backdoor into $\mathcal{C}$ is unbounded. 
+
+First we will show the necessary notation and definitions used in \cite{maehlmann2021recursive}. Let $\star \in \{+,-\}$ denote the polarity of a literal in a formula $F$ (where $x_+$ corresponds to $x^1$ and $x_-$ to $x^0$). For a truth assignment $\tau$, let $G[\tau]$ be the incidence graph of $F[\tau]$. Similarly, let $G[x^{\star}]$ be the incidence graph of $F[\tau]$, where $\tau \in 2^X, X = \{x\}$ and $\tau(x) = \star$, so $G[x^{\star}]$ is the incidence graph of the formula that results from assigning a value to a single variable $x$. Note that $G[\tau]$ is an induced subgraph of $G$ for every truth assignment $\tau$. The edges of the incidence graph are then partitioned into the two parts $E_+, E_-$, where $E_+$ contains the edges of the positive incidence graph and $E_-$ contains the edges of the negative incidence graph. For a vertex $v$ in an incidence graph the closed $\star$-neighborhood of $v$ is defined as $N_{\star}[v] := \{w \colon \{v,w\} \in E_{\star}\}$. For a graph with vertex set $V$ and a set $W \subseteq V$, let $G[W]$ be the subgraph induced by $W$ and $G - W$ the subgraph induced by $G[V \setminus{W}]$. Furthermore, we don't distinguish between a formula $F$ and its incidence graph $G$ in this section. 
+
+The concept of strong recursive backdoors is built on the observation that the components of $G_{x_{\star}}$ can be handled independently. This leads to the definition of a strong recursive backdoor:
+
+\begin{definition}
+A \textit{strong recursive backdoor} (SRB) of an incidence graph $G$ to a class $\mathcal{C}$ is a rooted labeled tree, where every node is either labeled with a subgraph of $G$ or with a variable in $var(G)$. The root of the tree is labeled with $G$. Whenever an inner node is labeled with a connected graph $H$, then it has one child labeled with a variable. Whenever it is labeled with a disconnected graph, then it has one child for each of its components, labeled with the graph induced by that component. Whenever an inner node is labeled with a variable $x$, then its parent is labeled with a graph $H$, and its two children are labeled with $H[x_+]$ and $H[x_-]$, respectively. Every leaf node is labeled with a graph from $\mathcal{C}$. We call the nodes of the tree \textit{variable nodes} or \textit{component nodes}, according to their labeling. 
+\end{definition}
+The depth of a strong recursive backdoor is then defined as the number of variable nodes from its root to one of its leafs. The strong recursive depth to a class $\mathcal{C}$ is then defined as the minimal depth of all strong recursive backdoors of $G$. By this definition we can see that the tree branches into the connected components of a formula and considers these instances separately, as described before. Furthermore, we show the precise definition of strong recursive backdoor depth:
+\begin{definition}[Strong recursive backdoor depth,{\cite[Definition 3.1, p.5]{maehlmann2021recursive}}]
+
+\begin{equation*}
+    \text{srbd}_{\mathcal{C}}(G) = 
+    \begin{cases*}
+      0 & if $G \in \mathcal{C}$  \\
+	1 + \min_{x \in var(G)} \max_{\star \in \{+,-\}} \text{srbd}_{\mathcal{C}}(G[x_{\star}]) & if $G \notin \mathcal{C}$ and $G$ is connected \\
+      \max \{  \text{srbd}_{\mathcal{C}}(H) \colon H \text{ connected component of } G \}       & otherwise 
+    \end{cases*}
+  \end{equation*}
+\end{definition}
+Note that weak recursive backdoors are defined similarly, but since only one assignment of the variables in the backdoor must be satisfiable and lead into a tractable class $\mathcal{C}$, the weak recursive backdoor depth is defined as the minimum number of variables that lead into a subgraph of $G$ that is satisfiable and in $\mathcal{C}$.
+
+A visualization of strong recursive backdoors and strong recursive backdoor depth is given with an example in Figure \ref{fig:srb-1}. 
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/srb-to-horn.eps}   
+	\caption{We show a strong recursive backdoor into Horn for the formula $G = (x_1 \lor \overline{x_2}) \land (x_2 \lor x_3) \land (x_4 \lor x_5)$. As the incidence graph is initially disconnected, the children of the root node are the connected components of $G$. By assigning $x_3$ in $H_1$ and $x_4$ in $H_2$ we get a labeled tree, where all leafs are Horn-formulas. Furthermore, the depth of this strong recursive backdoor is 1, as there is only 1 variable node on each path from the root to a leaf. It can be easily seen that this depth is minimal over all strong recursive backdoors of $G$, thus the strong recursive backdoor width of $G$ is 1. }
+	\label{fig:srb-1}
+\end{figure}
+
+Mählmann et al. show the existence of a class of CNF formulas with unbounded backdoor treewidth, but a constant strong recursive backdoor depth. Therefore, some SAT-instances can be solved in FPT time parameterized by the strong recursive backdoor depth, but not by their backdoor treewidth. By showing that the number of leaves in the tree is bounded by $2^k \cdot |F|$, the authors prove that given a strong recursive backdoor with depth $k$ for a formula $F$, the satisfiability of the formula can be decided in time $2^k \cdot poly(|F|)$, where $poly(|F|)$ denotes some polynomial that only depends on the size of $F$ \cite[p.6]{maehlmann2021recursive}. Furthermore, they describe an FPT algorithm that, given a formula $F$ and an integer $k$, either computes a strong recursive backdoor of depth $k$ into the class $\mathcal{C}_0$, or concludes that such a strong recursive backdoor does not exist: 
+\begin{theorem}[{\cite[Theorem 4.5, p.10]{maehlmann2021recursive}}]
+There is an algorithm that, given as input an integer $k$ and an incidence graph $G$, in time $2^{2^(\mathcal{O}(k))} \cdot |G|$ either: 
+\begin{enumerate}
+\item returns a strong recursive backdoor of $G$ to $\mathcal{C}_{0}$ of depth at most $3^k \cdot \lambda_k \cdot k^2$, or
+\item concludes that $\text{srbd}_{\mathcal{C}_0}(G) > k$.
+\end{enumerate}
+\end{theorem}
+Furthermore, Maehlmann et al. show that weak recursive $\mathcal{C}_0$-backdoor detection is W[2]-hard by providing a paramterized reduction from \textsc{Set Cover}\cite[p.12]{maehlmann2021recursive}.  
 
 \section{Conclusions}
 \label{sec:conclusions}
+With this seminar paper, we intend to give an introduction into the study of backdoors in SAT. We show the concepts of backdoor sets of size $k$ into a tractable class of formulas $\mathcal{C}$ and $\mathcal{C}$-backdoor set detection. Furthermore, we discuss how backdoors can be used to explain the performance of modern SAT-solvers despite the theoretical complexity of the Satisfiability Problem. We present fixed-parameter tractability results for backdoor set detection for some tractable base classes as shown in a survey of Gaspers and Szeider \cite{Gaspers2012}, although there are many more base classes that can be considered. Further research also considers backdoor set detection with empty clause detection, and the study of permissive problems, where the permissive variant of a $\mathcal{C}$-backdoor detection problems allows to return a satisfying assignment instead of a backdoor, as the latter can be hard to compute even in trivial instances \cite[p.301]{Gaspers2012}. 
+
+We also show that some SAT-instances are fixed-parameter tractable even if the size of a smallest backdoor into a base class $\mathcal{C}$ is unbounded. In this context, we present the concepts of backdoor treewidth \cite{GanianBackdoorTreewidth} and recursive backdoors \cite{maehlmann2021recursive}. In both concepts, backdoors with bounded treewidth or bounded recursive backdoor depth can contain an unbounded number of variables. While there are already FPT results by Ganian et al.\cite[p.30]{GanianBackdoorTreewidth} for instances that can be split into different tractable classes, Mählmann et al. only provide FPT results for recursive backdoor detection into the class $\mathcal{C}_0$, although the authors are optimistic that further research will lead to FPT results for other tractable classes as well. 
+
 
 \bibliographystyle{plain}
 \bibliography{references}

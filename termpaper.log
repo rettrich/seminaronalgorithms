@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.7.30)  15 JUN 2021 15:38
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.7.30)  16 JUN 2021 17:32
  restricted system commands enabled.
 **termpaper.tex
 (./termpaper.tex
@@ -678,31 +678,32 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 Package amsthm Warning: Unknown theoremstyle `proposition' on input line 46.
 
 \c@proposition=\count285
+\c@theorem=\count286
 (./termpaper.aux)
 \openout1 = termpaper.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 58
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 61
 .
 
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -742,16 +743,16 @@ LaTeX Font Info:    ... okay on input line 58.
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
+\scratchcounter=\count287
 \scratchdimen=\dimen269
 \scratchbox=\box61
-\nofMPsegments=\count287
-\nofMParguments=\count288
+\nofMPsegments=\count288
+\nofMParguments=\count289
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count289
+\MPscratchCnt=\count290
 \MPscratchDim=\dimen270
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
 \everyMPtoPDFconversion=\toks49
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-
@@ -764,160 +765,269 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 Package todonotes Warning: The length marginparwidth is less than 2cm and will m
 ost likely cause issues with the appearance of inserted todonotes. The issue can
  be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loa
-ding the todonotes package. on input line 58.
+ding the todonotes package. on input line 61.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
 
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Warning: Citation `Cook71' on page 1 undefined on input line 70.
+LaTeX Warning: Citation `Cook71' on page 1 undefined on input line 73.
 
 
-LaTeX Warning: Citation `Levin73' on page 1 undefined on input line 70.
+LaTeX Warning: Citation `Levin73' on page 1 undefined on input line 73.
 
 
-LaTeX Warning: Citation `downeyFellows' on page 1 undefined on input line 72.
+LaTeX Warning: Citation `downeyFellows' on page 1 undefined on input line 75.
 
 
-LaTeX Warning: Reference `sec:preliminaries' on page 1 undefined on input line 7
-4.
-
-
-LaTeX Warning: Reference `sec:generalresults' on page 1 undefined on input line 
-74.
-
-
-LaTeX Warning: Citation `Gaspers2012' on page 1 undefined on input line 74.
-
-
-LaTeX Warning: Reference `sec:relatedwork' on page 1 undefined on input line 74.
-
-
-
-LaTeX Warning: Reference `sec:conclusions' on page 1 undefined on input line 74.
-
-
-
-LaTeX Warning: Citation `Gaspers2012' on page 1 undefined on input line 78.
-
-
-LaTeX Warning: Citation `Cygan2015' on page 1 undefined on input line 78.
-
-
-LaTeX Warning: Reference `sec:relatedwork' on page 1 undefined on input line 78.
-
+LaTeX Warning: Citation `Gaspers2012' on page 1 undefined on input line 77.
 
 [1
 
 {C:/Users/Rupert/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+LaTeX Warning: Citation `Gaspers2012' on page 2 undefined on input line 84.
+
+
+LaTeX Warning: Citation `Cygan2015' on page 2 undefined on input line 84.
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-[2]
 
-LaTeX Warning: Citation `downeyFellows' on page 3 undefined on input line 99.
-
-
-LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 99.
+LaTeX Warning: Citation `downeyFellows' on page 3 undefined on input line 105.
 
 
-LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 100.
+LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 105.
 
 
-LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 104.
+LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 106.
 
 
-LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 107.
+LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 110.
 
 
-LaTeX Warning: Citation `Gaspers2012' on page 3 undefined on input line 111.
+LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 113.
 
 
-LaTeX Warning: Citation `Gaspers2012' on page 3 undefined on input line 122.
+LaTeX Warning: Citation `Gaspers2012' on page 3 undefined on input line 117.
 
 [3]
 
-LaTeX Warning: Reference `def:baseclass' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 128.
 
 
-LaTeX Warning: Citation `HornSAT' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `HornSAT' on page 4 undefined on input line 136.
 
 
-LaTeX Warning: Citation `2SAT' on page 4 undefined on input line 130.
-
-
-LaTeX Warning: Reference `def:baseclass' on page 4 undefined on input line 130.
+LaTeX Warning: Citation `2SAT' on page 4 undefined on input line 136.
 
 
 LaTeX Warning: Citation `typicalCaseComplexity' on page 4 undefined on input lin
-e 135.
+e 141.
 
 
-LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 137.
+LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 143.
 
 
-LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 138.
-
-
-LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 142.
-
-
-LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 146.
+LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 144.
 
 [4]
 
-LaTeX Warning: Citation `Gaspers2012' on page 5 undefined on input line 157.
+LaTeX Warning: Citation `Gaspers2012' on page 5 undefined on input line 148.
+
+
+LaTeX Warning: Citation `Gaspers2012' on page 5 undefined on input line 152.
+
+
+LaTeX Warning: Citation `HandbookOfSAT' on page 5 undefined on input line 162.
+
+
+LaTeX Warning: Citation `HandbookOfSAT' on page 5 undefined on input line 165.
 
 
 LaTeX Warning: Citation `Gaspers2012' on page 5 undefined on input line 170.
 
+[5]
 
-LaTeX Warning: Citation `Nishimura' on page 5 undefined on input line 170.
-
-
-LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
-(Font)              using `TU/lmr/m/scsl' instead on input line 171.
+LaTeX Warning: Citation `Gaspers2012' on page 6 undefined on input line 184.
 
 
-LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
-(Font)              using `TU/lmr/m/scsl' instead on input line 171.
+LaTeX Warning: Citation `Nishimura' on page 6 undefined on input line 184.
 
 
 LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
-(Font)              using `TU/lmr/m/scsl' instead on input line 171.
+(Font)              using `TU/lmr/m/scsl' instead on input line 185.
 
 
-LaTeX Warning: Reference `fig:2cnf-to-3hittingset' on page 5 undefined on input 
-line 176.
+LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
+(Font)              using `TU/lmr/m/scsl' instead on input line 185.
+
+
+LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
+(Font)              using `TU/lmr/m/scsl' instead on input line 185.
 
 Package epstopdf Info: Source file: <figures/hitting_set.eps>
 (epstopdf)                    date: 2021-04-29 15:23:25
 (epstopdf)                    size: 65799 bytes
 (epstopdf)             Output file: <figures/hitting_set-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-15 15:38:39
+(epstopdf)                    size: 8720 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/hitting_set-eps-conv
 erted-to.pdf figures/hitting_set.eps>
-(epstopdf)             \includegraphics on input line 179.
-system(epstopdf --outfile=figures/hitting_set-eps-converted-to.pdf figures/hitti
-ng_set.eps) executed.
-Package epstopdf Info: Result file: <figures/hitting_set-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-06-15 15:38:39
-(epstopdf)                    size: 8720 bytes.
-<figures/hitting_set-eps-converted-to.pdf, id=57, 202.7575pt x 142.5325pt>
+(epstopdf)             \includegraphics on input line 196.
+Package epstopdf Info: Output file is already uptodate.
+<figures/hitting_set-eps-converted-to.pdf, id=63, 202.7575pt x 142.5325pt>
 File: figures/hitting_set-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/hitting_set-eps-converted-to.pdf>
 Package luatex.def Info: figures/hitting_set-eps-converted-to.pdf  used on input
- line 179.
-(luatex.def)             Requested size: 386.95897pt x 272.0281pt.
-[5]
+ line 196.
+(luatex.def)             Requested size: 241.84843pt x 170.01811pt.
+[6<./figures/hitting_set-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `Gaspers2012' on page 7 undefined on input line 211.
+
+
+LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
+(Font)              using `TU/lmr/m/scsl' instead on input line 212.
+
+
+LaTeX Warning: Citation `Gaspers2012' on page 7 undefined on input line 217.
+
+
+LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
+(Font)              using `TU/lmr/m/scsl' instead on input line 218.
+
+
+LaTeX Warning: Citation `GanianCSP' on page 7 undefined on input line 230.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 7 undefined on input l
+ine 230.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 7 undefined on input l
+ine 230.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 7 undefined on input l
+ine 232.
+
+[7]
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 8 undefined on input l
+ine 236.
+
+Package epstopdf Info: Source file: <figures/backdoortreewidth.eps>
+(epstopdf)                    date: 2021-06-16 14:49:57
+(epstopdf)                    size: 66886 bytes
+(epstopdf)             Output file: <figures/backdoortreewidth-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2021-06-16 14:54:52
+(epstopdf)                    size: 8393 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/backdoortreewidth-ep
+s-converted-to.pdf figures/backdoortreewidth.eps>
+(epstopdf)             \includegraphics on input line 243.
+Package epstopdf Info: Output file is already uptodate.
+<figures/backdoortreewidth-eps-converted-to.pdf, id=87, 486.81876pt x 136.51pt>
+File: figures/backdoortreewidth-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/backdoortreewidth-eps-converted-to.pdf>
+Package luatex.def Info: figures/backdoortreewidth-eps-converted-to.pdf  used on
+ input line 243.
+(luatex.def)             Requested size: 483.69687pt x 135.6348pt.
+Package epstopdf Info: Source file: <figures/backdoortreewidth2.eps>
+(epstopdf)                    date: 2021-06-16 14:52:24
+(epstopdf)                    size: 31780 bytes
+(epstopdf)             Output file: <figures/backdoortreewidth2-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2021-06-16 14:54:53
+(epstopdf)                    size: 5026 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/backdoortreewidth2-e
+ps-converted-to.pdf figures/backdoortreewidth2.eps>
+(epstopdf)             \includegraphics on input line 249.
+Package epstopdf Info: Output file is already uptodate.
+<figures/backdoortreewidth2-eps-converted-to.pdf, id=88, 107.40125pt x 7.02625pt
+>
+File: figures/backdoortreewidth2-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/backdoortreewidth2-eps-converted-to.pdf>
+Package luatex.def Info: figures/backdoortreewidth2-eps-converted-to.pdf  used o
+n input line 249.
+(luatex.def)             Requested size: 145.11053pt x 9.494pt.
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 8 undefined on input l
+ine 254.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 8 undefined on input l
+ine 254.
+
+
+LaTeX Warning: Citation `GanianCSP' on page 8 undefined on input line 254.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 8 undefined on input l
+ine 254.
+
+[8<./figures/backdoortreewidth-eps-converted-to.pdf><./figures/backdoortreewidth
+2-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 9 undefined on input l
+ine 255.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 9 undefined on input l
+ine 259.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 9 undefined on input l
+ine 263.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 9 undefined on input l
+ine 267.
+
+
+LaTeX Warning: Citation `maehlmann2021recursive' on page 9 undefined on input li
+ne 273.
+
+
+LaTeX Warning: Citation `maehlmann2021recursive' on page 9 undefined on input li
+ne 275.
+
+
+LaTeX Warning: Reference `srb-1' on page 9 undefined on input line 283.
+
+Package epstopdf Info: Source file: <figures/srb-to-horn.eps>
+(epstopdf)                    date: 2021-06-16 17:31:08
+(epstopdf)                    size: 86181 bytes
+(epstopdf)             Output file: <figures/srb-to-horn-eps-converted-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=figures/srb-to-horn-eps-conv
+erted-to.pdf figures/srb-to-horn.eps>
+(epstopdf)             \includegraphics on input line 286.
+system(epstopdf --outfile=figures/srb-to-horn-eps-converted-to.pdf figures/srb-t
+o-horn.eps) executed.
+Package epstopdf Info: Result file: <figures/srb-to-horn-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-16 17:32:54
+(epstopdf)                    size: 10824 bytes.
+<figures/srb-to-horn-eps-converted-to.pdf, id=116, 420.57124pt x 254.9525pt>
+File: figures/srb-to-horn-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/srb-to-horn-eps-converted-to.pdf>
+Package luatex.def Info: figures/srb-to-horn-eps-converted-to.pdf  used on input
+ line 286.
+(luatex.def)             Requested size: 290.22107pt x 175.93295pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 No file termpaper.bbl.
-[6<./figures/hitting_set-eps-converted-to.pdf>] (./termpaper.aux)
+[9] [10<./figures/srb-to-horn-eps-converted-to.pdf>] (./termpaper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -927,16 +1037,15 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 15153 strings out of 480878
+ 15110 strings out of 480878
  100000,662416 words of node,token memory allocated
- 4605 words of node memory still in use:
-   92 hlist, 8 vlist, 10 rule, 6 disc, 4 local_par, 111 glue, 13 kern, 9 penalty
-, 94 glyph, 273 attribute, 56 glue_spec, 273 attribute_list, 6 write, 4 save_pos
-, 150 pdf_literal, 20 pdf_colorstack nodes
-   avail lists: 1:1,2:614,3:177,4:22,5:328,6:18,7:4904,8:36,9:151,10:14,11:350
- 32133 multiletter control sequences out of 65536+200000
- 61 fonts using 6735627 bytes
- 68i,11n,83p,1283b,1095s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 1031 words of node memory still in use:
+   22 hlist, 2 vlist, 10 rule, 2 glue, 4 kern, 1 glyph, 55 attribute, 56 glue_sp
+ec, 55 attribute_list, 2 write, 16 pdf_literal, 16 pdf_colorstack nodes
+   avail lists: 1:1,2:477,3:92,4:31,5:342,6:22,7:5129,8:36,9:151,10:15,11:371
+ 32072 multiletter control sequences out of 65536+200000
+ 79 fonts using 7852115 bytes
+ 68i,11n,83p,1551b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/rupert/appdata/local/programs/miktex/fonts/opentype/public/lm/lmro
 mancaps10-oblique.otf><//?/c:/users/rupert/appdata/local/programs/miktex/fonts/o
 pentype/public/lm/lmroman10-italic.otf><//?/c:/users/rupert/appdata/local/progra
@@ -952,17 +1061,18 @@ f><C:/Users/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmmi6.pfb><C:/Users/Rupert/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Rupert/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Rupert/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Rupert/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Rupert/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rup
-ert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/U
-sers/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/ms
-bm10.pfb>
-Output written on termpaper.pdf (6 pages, 180090 bytes).
+/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Rupert/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Rupert/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Rupert/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Rupert/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Rupe
+rt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
+sers/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.p
+fb><C:/Users/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sy
+mbols/msbm10.pfb>
+Output written on termpaper.pdf (10 pages, 236703 bytes).
 
-PDF statistics: 168 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 231 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  176 words of extra memory for PDF output out of 10000 (max. 100000000)
 

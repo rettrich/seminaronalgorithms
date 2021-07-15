@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.24">
-<info created="D:20210616173055" modified="D:20210616173055"/>
+<info created="D:20210616173055" modified="D:20210715155859"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -347,7 +347,7 @@ h
 16 0 0 16 320 704 e
 </path>
 <text matrix="1 0 0 1 -21.792 -1.34796" transformations="translations" pos="320 704" stroke="black" type="label" width="12.751" height="6.812" depth="1.49" valign="baseline" style="math">H_2</text>
-<text matrix="1 0 0 1 -44.258 -2.2466" transformations="translations" pos="118.893 704.743" stroke="black" type="label" width="115.393" height="7.473" depth="2.49" valign="baseline" style="math">H_1 = (x_1 \lor \overline{x_2} \land (x_2 \lor x_3))</text>
+<text matrix="1 0 0 1 -44.258 -2.2466" transformations="translations" pos="118.893 704.743" stroke="black" type="label" width="115.393" height="7.473" depth="2.49" valign="baseline" style="math">H_1 = (x_1 \lor \overline{x_2}) \land (x_2 \lor x_3)</text>
 <text matrix="1 0 0 1 -2.47126 -2.47126" transformations="translations" pos="329.174 704.518" stroke="black" type="label" width="65.179" height="7.473" depth="2.49" valign="baseline" style="math">H_2 = (x_4 \lor x_5)</text>
 <path stroke="black">
 244.184 757.212 m

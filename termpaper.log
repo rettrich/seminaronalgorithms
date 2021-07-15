@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.7.30)  16 JUN 2021 17:32
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.7.30)  15 JUL 2021 15:59
  restricted system commands enabled.
 **termpaper.tex
 (./termpaper.tex
@@ -268,6 +268,41 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip56
 \dth@everypar=\toks32
 )
+(C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/mathtools/mathtools.st
+y
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+ (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count192
+\calc@Bcount=\count193
+\calc@Adimen=\dimen159
+\calc@Bdimen=\dimen160
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count194
+\calc@Cskip=\skip59
+)
+(C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count195
+\l_MT_multwidth_dim=\dimen161
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen162
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen163
+\l_MT_above_intertext_sep=\dimen164
+\l_MT_below_intertext_sep=\dimen165
+\l_MT_above_shortintertext_sep=\dimen166
+\l_MT_below_shortintertext_sep=\dimen167
+\xmathstrut@box=\box50
+\xmathstrut@dim=\dimen168
+)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/todonotes/todonotes.st
 y
 Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
@@ -283,7 +318,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 )
-\XKV@depth=\count192
+\XKV@depth=\count196
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -316,14 +351,14 @@ ty
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfuti
 l-common.tex
 \pgfutil@everybye=\toks35
-\pgfutil@tempdima=\dimen159
-\pgfutil@tempdimb=\dimen160
+\pgfutil@tempdima=\dimen169
+\pgfutil@tempdimb=\dimen170
 
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfuti
 l-common-lists.tex))
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfuti
 l-latex.def
-\pgfutil@abb=\box50
+\pgfutil@abb=\box51
 
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
@@ -353,8 +388,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 105.
 )
-\Gin@req@height=\dimen161
-\Gin@req@width=\dimen162
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/pgf/systemlayer/pgfsys
 .sty
@@ -371,26 +406,26 @@ s.code.tex
 sfiltered.code.tex
 \pgfkeys@tmptoks=\toks38
 ))
-\pgf@x=\dimen163
-\pgf@y=\dimen164
-\pgf@xa=\dimen165
-\pgf@ya=\dimen166
-\pgf@xb=\dimen167
-\pgf@yb=\dimen168
-\pgf@xc=\dimen169
-\pgf@yc=\dimen170
-\pgf@xd=\dimen171
-\pgf@yd=\dimen172
+\pgf@x=\dimen173
+\pgf@y=\dimen174
+\pgf@xa=\dimen175
+\pgf@ya=\dimen176
+\pgf@xb=\dimen177
+\pgf@yb=\dimen178
+\pgf@xc=\dimen179
+\pgf@yc=\dimen180
+\pgf@xd=\dimen181
+\pgf@yd=\dimen182
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count193
-\c@pgf@countb=\count194
-\c@pgf@countc=\count195
-\c@pgf@countd=\count196
+\c@pgf@counta=\count197
+\c@pgf@countb=\count198
+\c@pgf@countc=\count199
+\c@pgf@countd=\count266
 \t@pgf@toka=\toks39
 \t@pgf@tokb=\toks40
 \t@pgf@tokc=\toks41
-\pgf@sys@id@count=\count197
+\pgf@sys@id@count=\count267
 
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf.
 cfg
@@ -409,8 +444,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfs
 yssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count198
-\pgfsyssoftpath@bigbuffer@items=\count199
+\pgfsyssoftpath@smallbuffer@items=\count268
+\pgfsyssoftpath@bigbuffer@items=\count269
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfs
 ysprotocol.code.tex
@@ -428,9 +463,9 @@ e.tex
 .code.tex)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathpars
 er.code.tex
-\pgfmath@dimen=\dimen173
-\pgfmath@count=\count266
-\pgfmath@box=\box51
+\pgfmath@dimen=\dimen183
+\pgfmath@count=\count270
+\pgfmath@box=\box52
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
 \pgfmath@stack@operation=\toks44
@@ -455,59 +490,59 @@ tions.misc.code.tex)
 tions.integerarithmetics.code.tex)))
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfloa
 t.code.tex
-\c@pgfmathroundto@lastzeros=\count267
+\c@pgfmathroundto@lastzeros=\count271
 ))
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code
 .tex)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 repoints.code.tex
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen174
-\pgf@picmaxx=\dimen175
-\pgf@picminy=\dimen176
-\pgf@picmaxy=\dimen177
-\pgf@pathminx=\dimen178
-\pgf@pathmaxx=\dimen179
-\pgf@pathminy=\dimen180
-\pgf@pathmaxy=\dimen181
-\pgf@xx=\dimen182
-\pgf@xy=\dimen183
-\pgf@yx=\dimen184
-\pgf@yy=\dimen185
-\pgf@zx=\dimen186
-\pgf@zy=\dimen187
+\pgf@picminx=\dimen184
+\pgf@picmaxx=\dimen185
+\pgf@picminy=\dimen186
+\pgf@picmaxy=\dimen187
+\pgf@pathminx=\dimen188
+\pgf@pathmaxx=\dimen189
+\pgf@pathminy=\dimen190
+\pgf@pathmaxy=\dimen191
+\pgf@xx=\dimen192
+\pgf@xy=\dimen193
+\pgf@yx=\dimen194
+\pgf@yy=\dimen195
+\pgf@zx=\dimen196
+\pgf@zy=\dimen197
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 repathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen188
-\pgf@path@lasty=\dimen189
+\pgf@path@lastx=\dimen198
+\pgf@path@lasty=\dimen199
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 repathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen190
-\pgf@shorten@start@additional=\dimen191
+\pgf@shorten@end@additional=\dimen256
+\pgf@shorten@start@additional=\dimen257
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 rescopes.code.tex
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box52
-\pgf@hbox=\box53
-\pgf@layerbox@main=\box54
-\pgf@picture@serial@count=\count268
+\pgfpic=\box53
+\pgf@hbox=\box54
+\pgf@layerbox@main=\box55
+\pgf@picture@serial@count=\count272
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 regraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen192
+\pgflinewidth=\dimen258
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 retransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen193
-\pgf@pt@y=\dimen194
-\pgf@pt@temp=\dimen195
+\pgf@pt@x=\dimen259
+\pgf@pt@y=\dimen260
+\pgf@pt@temp=\dimen261
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 requick.code.tex
@@ -524,14 +559,14 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 rearrows.code.tex
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen196
+\pgfarrowsep=\dimen262
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 reshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen197
-\pgf@sys@shading@range@num=\count269
-\pgf@shadingcount=\count270
+\pgf@max=\dimen263
+\pgf@sys@shading@range@num=\count273
+\pgf@shadingcount=\count274
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 reimage.code.tex
@@ -540,7 +575,7 @@ File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 reexternal.code.tex
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box55
+\pgfexternal@startupbox=\box56
 ))
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfco
 relayers.code.tex
@@ -561,7 +596,7 @@ File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodul
 eshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box56
+\pgfnodeparttextbox=\box57
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodul
 eplot.code.tex
@@ -570,8 +605,8 @@ File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfc
 omp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen198
-\pgf@nodesepend=\dimen199
+\pgf@nodesepstart=\dimen264
+\pgf@nodesepend=\dimen265
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/pgf/compatibility/pgfc
 omp-version-1-18.sty
@@ -592,8 +627,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.cod
 e.tex)
-\pgffor@iter=\dimen256
-\pgffor@skip=\dimen257
+\pgffor@iter=\dimen266
+\pgffor@skip=\dimen267
 \pgffor@stack=\toks45
 \pgffor@toks=\toks46
 ))
@@ -604,34 +639,34 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflib
 raryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count271
-\pgfplotmarksize=\dimen258
+\pgf@plot@mark@count=\count275
+\pgfplotmarksize=\dimen268
 )
-\tikz@lastx=\dimen259
-\tikz@lasty=\dimen260
-\tikz@lastxsaved=\dimen261
-\tikz@lastysaved=\dimen262
-\tikz@lastmovetox=\dimen263
-\tikz@lastmovetoy=\dimen264
-\tikzleveldistance=\dimen265
-\tikzsiblingdistance=\dimen266
-\tikz@figbox=\box57
-\tikz@figbox@bg=\box58
-\tikz@tempbox=\box59
-\tikz@tempbox@bg=\box60
-\tikztreelevel=\count272
-\tikznumberofchildren=\count273
-\tikznumberofcurrentchild=\count274
-\tikz@fig@count=\count275
+\tikz@lastx=\dimen269
+\tikz@lasty=\dimen270
+\tikz@lastxsaved=\dimen271
+\tikz@lastysaved=\dimen272
+\tikz@lastmovetox=\dimen273
+\tikz@lastmovetoy=\dimen274
+\tikzleveldistance=\dimen275
+\tikzsiblingdistance=\dimen276
+\tikz@figbox=\box58
+\tikz@figbox@bg=\box59
+\tikz@tempbox=\box60
+\tikz@tempbox@bg=\box61
+\tikztreelevel=\count276
+\tikznumberofchildren=\count277
+\tikznumberofcurrentchild=\count278
+\tikz@fig@count=\count279
 
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodul
 ematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count276
-\pgfmatrixcurrentcolumn=\count277
-\pgf@matrix@numberofcolumns=\count278
+\pgfmatrixcurrentrow=\count280
+\pgfmatrixcurrentcolumn=\count281
+\pgf@matrix@numberofcolumns=\count282
 )
-\tikz@expandcount=\count279
+\tikz@expandcount=\count283
 
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/ti
 kz/libraries/tikzlibrarytopaths.code.tex
@@ -653,32 +688,19 @@ File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 raryfadings.code.tex
 File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-(C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count280
-\calc@Bcount=\count281
-\calc@Adimen=\dimen267
-\calc@Bdimen=\dimen268
-\calc@Askip=\skip57
-\calc@Bskip=\skip58
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count282
-\calc@Cskip=\skip59
-)
-\c@@todonotes@numberoftodonotes=\count283
+\c@@todonotes@numberoftodonotes=\count284
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks47
 )
-\c@definition=\count284
+\c@definition=\count285
 
 
 Package amsthm Warning: Unknown theoremstyle `proposition' on input line 46.
 
-\c@proposition=\count285
-\c@theorem=\count286
+\c@proposition=\count286
+\c@theorem=\count287
 (./termpaper.aux)
 \openout1 = termpaper.aux
 
@@ -743,16 +765,16 @@ LaTeX Font Info:    ... okay on input line 61.
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
-\scratchdimen=\dimen269
-\scratchbox=\box61
-\nofMPsegments=\count288
-\nofMParguments=\count289
+\scratchcounter=\count288
+\scratchdimen=\dimen277
+\scratchbox=\box62
+\nofMPsegments=\count289
+\nofMParguments=\count290
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count290
-\MPscratchDim=\dimen270
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen278
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
 \everyMPtoPDFconversion=\toks49
 )
 (C:/Users/Rupert/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-
@@ -777,6 +799,10 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
+LaTeX Warning: Citation `DBLP:journals/pieee/VizelWM15' on page 1 undefined on i
+nput line 71.
+
+
 LaTeX Warning: Citation `Cook71' on page 1 undefined on input line 73.
 
 
@@ -785,12 +811,12 @@ LaTeX Warning: Citation `Levin73' on page 1 undefined on input line 73.
 
 LaTeX Warning: Citation `downeyFellows' on page 1 undefined on input line 75.
 
-
-LaTeX Warning: Citation `Gaspers2012' on page 1 undefined on input line 77.
-
 [1
 
 {C:/Users/Rupert/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+
+LaTeX Warning: Citation `Gaspers2012' on page 2 undefined on input line 77.
+
 
 LaTeX Warning: Citation `Gaspers2012' on page 2 undefined on input line 84.
 
@@ -801,9 +827,6 @@ LaTeX Warning: Citation `Cygan2015' on page 2 undefined on input line 84.
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
-
-
-LaTeX Warning: Citation `downeyFellows' on page 3 undefined on input line 105.
 
 
 LaTeX Warning: Citation `Cygan2015' on page 3 undefined on input line 105.
@@ -837,16 +860,7 @@ e 141.
 
 LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 143.
 
-
-LaTeX Warning: Citation `Gaspers2012' on page 4 undefined on input line 144.
-
 [4]
-
-LaTeX Warning: Citation `Gaspers2012' on page 5 undefined on input line 148.
-
-
-LaTeX Warning: Citation `Gaspers2012' on page 5 undefined on input line 152.
-
 
 LaTeX Warning: Citation `HandbookOfSAT' on page 5 undefined on input line 162.
 
@@ -857,9 +871,6 @@ LaTeX Warning: Citation `HandbookOfSAT' on page 5 undefined on input line 165.
 LaTeX Warning: Citation `Gaspers2012' on page 5 undefined on input line 170.
 
 [5]
-
-LaTeX Warning: Citation `Gaspers2012' on page 6 undefined on input line 184.
-
 
 LaTeX Warning: Citation `Nishimura' on page 6 undefined on input line 184.
 
@@ -891,14 +902,17 @@ File: figures/hitting_set-eps-converted-to.pdf Graphic file (type pdf)
 Package luatex.def Info: figures/hitting_set-eps-converted-to.pdf  used on input
  line 196.
 (luatex.def)             Requested size: 241.84843pt x 170.01811pt.
-[6<./figures/hitting_set-eps-converted-to.pdf>]
 
-LaTeX Warning: Citation `Gaspers2012' on page 7 undefined on input line 211.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `Gaspers2012' on page 6 undefined on input line 211.
 
 
 LaTeX Font Warning: Font shape `TU/lmr/m/scit' undefined
 (Font)              using `TU/lmr/m/scsl' instead on input line 212.
 
+[6]
 
 LaTeX Warning: Citation `Gaspers2012' on page 7 undefined on input line 217.
 
@@ -921,7 +935,7 @@ ine 230.
 LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 7 undefined on input l
 ine 232.
 
-[7]
+[7<./figures/hitting_set-eps-converted-to.pdf>]
 
 LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 8 undefined on input l
 ine 236.
@@ -967,67 +981,108 @@ ine 254.
 
 
 LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 8 undefined on input l
-ine 254.
+ine 256.
 
 
-LaTeX Warning: Citation `GanianCSP' on page 8 undefined on input line 254.
+LaTeX Warning: Citation `GanianCSP' on page 8 undefined on input line 256.
 
 
 LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 8 undefined on input l
-ine 254.
+ine 256.
 
 [8<./figures/backdoortreewidth-eps-converted-to.pdf><./figures/backdoortreewidth
 2-eps-converted-to.pdf>]
 
 LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 9 undefined on input l
-ine 255.
+ine 257.
 
 
 LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 9 undefined on input l
-ine 259.
+ine 261.
 
 
 LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 9 undefined on input l
-ine 263.
+ine 265.
 
 
 LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 9 undefined on input l
-ine 267.
-
-
-LaTeX Warning: Citation `maehlmann2021recursive' on page 9 undefined on input li
-ne 273.
+ine 269.
 
 
 LaTeX Warning: Citation `maehlmann2021recursive' on page 9 undefined on input li
 ne 275.
 
 
-LaTeX Warning: Reference `srb-1' on page 9 undefined on input line 283.
+LaTeX Warning: Citation `maehlmann2021recursive' on page 9 undefined on input li
+ne 277.
 
-Package epstopdf Info: Source file: <figures/srb-to-horn.eps>
-(epstopdf)                    date: 2021-06-16 17:31:08
-(epstopdf)                    size: 86181 bytes
-(epstopdf)             Output file: <figures/srb-to-horn-eps-converted-to.pdf>
-(epstopdf)             Command: <epstopdf --outfile=figures/srb-to-horn-eps-conv
-erted-to.pdf figures/srb-to-horn.eps>
-(epstopdf)             \includegraphics on input line 286.
-system(epstopdf --outfile=figures/srb-to-horn-eps-converted-to.pdf figures/srb-t
-o-horn.eps) executed.
-Package epstopdf Info: Result file: <figures/srb-to-horn-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-06-16 17:32:54
-(epstopdf)                    size: 10824 bytes.
-<figures/srb-to-horn-eps-converted-to.pdf, id=116, 420.57124pt x 254.9525pt>
-File: figures/srb-to-horn-eps-converted-to.pdf Graphic file (type pdf)
-<use figures/srb-to-horn-eps-converted-to.pdf>
-Package luatex.def Info: figures/srb-to-horn-eps-converted-to.pdf  used on input
- line 286.
-(luatex.def)             Requested size: 290.22107pt x 175.93295pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Citation `maehlmann2021recursive' on page 9 undefined on input li
+ne 283.
+
+[9]
+
+LaTeX Warning: Citation `maehlmann2021recursive' on page 10 undefined on input l
+ine 287.
+
+Package epstopdf Info: Source file: <figures/srb-to-horn-fixed.eps>
+(epstopdf)                    date: 2021-07-15 15:59:13
+(epstopdf)                    size: 85749 bytes
+(epstopdf)             Output file: <figures/srb-to-horn-fixed-eps-converted-to.
+pdf>
+(epstopdf)             Command: <epstopdf --outfile=figures/srb-to-horn-fixed-ep
+s-converted-to.pdf figures/srb-to-horn-fixed.eps>
+(epstopdf)             \includegraphics on input line 303.
+system(epstopdf --outfile=figures/srb-to-horn-fixed-eps-converted-to.pdf figures
+/srb-to-horn-fixed.eps) executed.
+Package epstopdf Info: Result file: <figures/srb-to-horn-fixed-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2021-07-15 15:59:39
+(epstopdf)                    size: 10837 bytes.
+<figures/srb-to-horn-fixed-eps-converted-to.pdf, id=119, 420.57124pt x 254.9525p
+t>
+File: figures/srb-to-horn-fixed-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/srb-to-horn-fixed-eps-converted-to.pdf>
+Package luatex.def Info: figures/srb-to-horn-fixed-eps-converted-to.pdf  used on
+ input line 303.
+(luatex.def)             Requested size: 386.95897pt x 234.57858pt.
+
+LaTeX Warning: Citation `maehlmann2021recursive' on page 10 undefined on input l
+ine 308.
+
+
+LaTeX Warning: Citation `maehlmann2021recursive' on page 10 undefined on input l
+ine 308.
+
+
+LaTeX Warning: Citation `maehlmann2021recursive' on page 10 undefined on input l
+ine 309.
+
+[10<./figures/srb-to-horn-fixed-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `maehlmann2021recursive' on page 11 undefined on input l
+ine 316.
+
+
+LaTeX Warning: Citation `Gaspers2012' on page 11 undefined on input line 320.
+
+
+LaTeX Warning: Citation `Gaspers2012' on page 11 undefined on input line 320.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 11 undefined on input 
+line 322.
+
+
+LaTeX Warning: Citation `maehlmann2021recursive' on page 11 undefined on input l
+ine 322.
+
+
+LaTeX Warning: Citation `GanianBackdoorTreewidth' on page 11 undefined on input 
+line 322.
 
 No file termpaper.bbl.
-[9] [10<./figures/srb-to-horn-eps-converted-to.pdf>] (./termpaper.aux)
+[11] (./termpaper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1037,20 +1092,20 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 15110 strings out of 480878
+ 15587 strings out of 480878
  100000,662416 words of node,token memory allocated
- 1031 words of node memory still in use:
-   22 hlist, 2 vlist, 10 rule, 2 glue, 4 kern, 1 glyph, 55 attribute, 56 glue_sp
-ec, 55 attribute_list, 2 write, 16 pdf_literal, 16 pdf_colorstack nodes
-   avail lists: 1:1,2:477,3:92,4:31,5:342,6:22,7:5129,8:36,9:151,10:15,11:371
- 32072 multiletter control sequences out of 65536+200000
- 79 fonts using 7852115 bytes
- 68i,11n,83p,1551b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 1040 words of node memory still in use:
+   22 hlist, 2 vlist, 10 rule, 2 glue, 4 kern, 1 glyph, 56 attribute, 57 glue_sp
+ec, 56 attribute_list, 2 write, 16 pdf_literal, 16 pdf_colorstack nodes
+   avail lists: 2:422,3:93,4:42,5:364,6:24,7:4914,8:48,9:178,10:23,11:347
+ 32535 multiletter control sequences out of 65536+200000
+ 80 fonts using 7983867 bytes
+ 68i,13n,83p,1283b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/rupert/appdata/local/programs/miktex/fonts/opentype/public/lm/lmro
 mancaps10-oblique.otf><//?/c:/users/rupert/appdata/local/programs/miktex/fonts/o
-pentype/public/lm/lmroman10-italic.otf><//?/c:/users/rupert/appdata/local/progra
-ms/miktex/fonts/opentype/public/lm/lmromancaps10-regular.otf><//?/c:/users/ruper
-t/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><//?
+pentype/public/lm/lmromancaps10-regular.otf><//?/c:/users/rupert/appdata/local/p
+rograms/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><//?/c:/users/rupert/
+appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman10-italic.otf><//?
 /c:/users/rupert/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman1
 0-bold.otf><//?/c:/users/rupert/appdata/local/programs/miktex/fonts/opentype/pub
 lic/lm/lmroman10-regular.otf><//?/c:/users/rupert/appdata/local/programs/miktex/
@@ -1067,12 +1122,13 @@ ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Rupert/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Rupert/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Rupe
 rt/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
-sers/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.p
-fb><C:/Users/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb>
-Output written on termpaper.pdf (10 pages, 236703 bytes).
+sers/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb><C:/Users/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb><C:/Users/Rupert/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb>
+Output written on termpaper.pdf (11 pages, 255234 bytes).
 
-PDF statistics: 231 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 240 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  176 words of extra memory for PDF output out of 10000 (max. 100000000)
 
